@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.DS_Store
+
+data/raw/*
+data/processed/*
+data/external/*
+
+models/*.pt
+models/*.pth
+reports/figures/*
+reports/metrics/*
+
+.streamlit/secrets.toml
