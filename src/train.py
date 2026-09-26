@@ -78,7 +78,15 @@ def main():
         dropout=cfg["model"]["dropout"],
     ).to(device)
 
-    criterion = nn.CrossEntropyLoss()
+    # Handle class imbalance in the training dataset
+    class_counts = torch.tensor([1341, 3875], dtype=torch.float32)
+
+    class_weights = class_counts.sum() / (len(class_counts) * class_counts)
+    class_weights = class_weights.to(device)
+
+    print("Class weights:", class_weights)
+
+    criterion = nn.CrossEntropyLoss(weight=class_weights)
     optimizer = torch.optim.AdamW(
         model.parameters(),
         lr=cfg["training"]["learning_rate"],

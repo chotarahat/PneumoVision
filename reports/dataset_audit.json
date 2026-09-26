@@ -1,0 +1,79 @@
+{
+    "dataset_root": "data\\raw\\chest_xray",
+    "splits": {
+        "train": {
+            "total": 5216,
+            "classes": {
+                "NORMAL": 1341,
+                "PNEUMONIA": 3875
+            },
+            "extensions": {
+                ".jpeg": 5216
+            },
+            "modes": {
+                "L": 4933,
+                "RGB": 283
+            },
+            "width": {
+                "min": 384,
+                "max": 2916,
+                "average": 1320.61
+            },
+            "height": {
+                "min": 127,
+                "max": 2663,
+                "average": 968.07
+            },
+            "corrupted": 0
+        },
+        "val": {
+            "total": 16,
+            "classes": {
+                "NORMAL": 8,
+                "PNEUMONIA": 8
+            },
+            "extensions": {
+                ".jpeg": 16
+            },
+            "modes": {
+                "L": 16
+            },
+            "width": {
+                "min": 968,
+                "max": 1776,
+                "average": 1348.25
+            },
+            "height": {
+                "min": 592,
+                "max": 1416,
+                "average": 1002.94
+            },
+            "corrupted": 0
+        },
+        "test": {
+            "total": 624,
+            "classes": {
+                "NORMAL": 234,
+                "PNEUMONIA": 390
+            },
+            "extensions": {
+                ".jpeg": 624
+            },
+            "modes": {
+                "L": 624
+            },
+            "width": {
+                "min": 728,
+                "max": 2752,
+                "average": 1388.13
+            },
+            "height": {
+                "min": 344,
+                "max": 2713,
+                "average": 991.71
+            },
+            "corrupted": 0
+        }
+    },
+    "total_images": 5856
+}
